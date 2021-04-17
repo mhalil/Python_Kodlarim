@@ -7,7 +7,6 @@ Belirtilen Ondalıklı sayıyı, Kesirli hale dönüştüren program.
 Örnek çıktılar;
 0.75 sayısının kesirli gösterimi: 3 / 4
 1.25 sayısının kesirli gösterimi: 5 / 4
-
 '''
 
 sayi = float(input("Kesirli halini görmek istediğiniz ondalıklı sayıyı yazın:"))
@@ -19,7 +18,7 @@ ond = int(bol[1])               # sayının ondalık kısmı
 ond_uzn = len(str(ond))         # ondalık kısmın basamak sayısı
 
 pay = int(str(ts) + str(ond))   # pay sayı değeri
-payda = 10 ** ond_uzn             # payda sayı değeri
+payda = 10 ** ond_uzn           # payda sayı değeri
 
 def carpan(sayi):               # belirtilen sayı değerini çarpanlara ayırıp liste halinde geri döndüren fonksiyon.
     lst = [1]
@@ -31,8 +30,7 @@ def carpan(sayi):               # belirtilen sayı değerini çarpanlara ayırı
             lst.append(bolen)
         else:
             bolen += 1
-    return lst
- 
+    return lst 
 
 def carp(liste):                # belirtilen liste içerisindeki tüm değerleri çarpıp sunuç döndüren fonksiyon. (liste içerisi sadece sayıdan oluşmalı)
     sonuc = 1
@@ -43,10 +41,8 @@ def carp(liste):                # belirtilen liste içerisindeki tüm değerleri
             sonuc *= i
     return sonuc
 
-
 pay_carpan = carpan(pay)           # pay sayı değerini çarpanlarına ayır, listele
 payda_carpan = carpan(payda)           # payda sayı değerini çarpanlarına ayır, listele
-
 
 def sil(a, l1, l2):             # 2 liste (l1 ve l2) içerisindeki ortak sayı değerini (a) silen fonksiyon.
     if ((a in l1) and (a in l2)):
@@ -54,7 +50,6 @@ def sil(a, l1, l2):             # 2 liste (l1 ve l2) içerisindeki ortak sayı d
         l2.remove(a)
 
 index = 0
-
 while index <= len(pay_carpan):    # index değeri, pay değerinin çarpanları sayısından küçük eşit olduğu sürece döngüyü çalıştır.
     try:
         a = pay_carpan[index]       # pay'ın tek çarpanlar değeri
