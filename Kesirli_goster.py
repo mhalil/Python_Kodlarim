@@ -19,7 +19,7 @@ ond = int(bol[1])               # sayının ondalık kısmı
 ond_uzn = len(str(ond))         # ondalık kısmın basamak sayısı
 
 pay = int(str(ts) + str(ond))   # pay sayı değeri
-pyd = 10 ** ond_uzn             # payda sayı değeri
+payda = 10 ** ond_uzn             # payda sayı değeri
 
 def carpan(sayi):               # belirtilen sayı değerini çarpanlara ayırıp liste halinde geri döndüren fonksiyon.
     lst = [1]
@@ -45,7 +45,7 @@ def carp(liste):                # belirtilen liste içerisindeki tüm değerleri
 
 
 pay_carpan = carpan(pay)           # pay sayı değerini çarpanlarına ayır, listele
-payda_carpan = carpan(pyd)           # payda sayı değerini çarpanlarına ayır, listele
+payda_carpan = carpan(payda)           # payda sayı değerini çarpanlarına ayır, listele
 
 
 def sil(a, l1, l2):             # 2 liste (l1 ve l2) içerisindeki ortak sayı değerini (a) silen fonksiyon.
