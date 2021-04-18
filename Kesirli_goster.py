@@ -34,7 +34,7 @@ def carpan(sayi):               # belirtilen sayı değerini çarpanlara ayırı
 
 def carp(liste):                # belirtilen liste içerisindeki tüm değerleri çarpıp sunuç döndüren fonksiyon. (liste içerisi sadece sayıdan oluşmalı)
     sonuc = 1
-    if liste == []:
+    if not liste:               # Then_Shiffman'ın katkısı (https://forum.yazbel.com/t/ondalikli-sayiyi-kesirli-hale-donustur/12361/2)
         sonuc = 1
     else:
         for i in liste:
