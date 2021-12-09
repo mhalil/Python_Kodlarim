@@ -1,3 +1,5 @@
+bakiye = 2500
+
 while True:
     
     print("""
@@ -11,7 +13,7 @@ while True:
     3 - Para Çekme
     Q - Çıkmak için
     """)
-    bakiye = 2500
+
     
     islem = input("İşlem No.: ")
     
@@ -21,13 +23,21 @@ while True:
     
     elif islem == "2":
         yatirilan = float(input("Yatırmak istediğiniz Miktarı Girin: "))
-        print("Toplam Bakiye: {} TL'dir.".format(bakiye + yatirilan))
+        bakiye += yatirilan
+        print("Toplam Bakiye: {} TL'dir.".format(bakiye))
     
     elif islem == "3":
         cekilen = float(input("Çekmek istediğiniz miktarı girin: "))
-        print("Mevcut bakiyeniz: ", bakiye - cekilen, "'TL dir.")
+        if cekilen > bakiye:
+            print("Çekmek istediğiniz tutar, Bakiye Tutarınızın üzerindedir.")
+        else:
+            bakiye -= cekilen
+            print("Mevcut bakiyeniz: ", bakiye, "'TL dir.")
     
     elif islem == "Q" or islem == "q":
         print("İşlem Sonlandı. Kartınızı almayı unutmayın.")
         break
+    
+    else:
+        print("Hatalı seçim yaptınız, Geçerli bir seçenek seçin lütfen !")
     
