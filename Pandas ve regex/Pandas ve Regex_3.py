@@ -1,3 +1,5 @@
+# Pandas ve Regex kullanılarak ... İÇEREN veri bulmaya ait kod
+
 import pandas as pd
 import re
 

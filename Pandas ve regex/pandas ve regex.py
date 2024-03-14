@@ -1,3 +1,5 @@
+# Pandas ve Regex kullanılarak ... İÇEREN veriyi "STRING Metodu" kullanarak bulmaya ait kod
+
 import pandas as pd
 import re
 
